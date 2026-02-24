@@ -2325,8 +2325,6 @@ SystemUI Tuner can be installed from [Google Play](https://play.google.com/store
 
 ### To Leave Developer Options off When Using Shizuku to Connect to ADB with SystemUI Tuner
 
-**WARNING**: In Android 14’s latest update, now Enable ADB can’t be persistently on unless USB connected.
-
 Some apps (such as many financial apps) may require `Developer Options` to be off when using them. This section is the tutorial about how to turn `Developer Options` off while still using ADB Shell with Shizuku.
 
 1. Run `adb shell` command `pm grant com.zacharee1.systemuituner android.permission.WRITE_SECURE_SETTINGS` (you can do it with Shizuku and a terminal such as Termux or aShell).
