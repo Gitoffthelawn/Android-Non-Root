@@ -10,11 +10,11 @@
 * **The app version**: <https://github.com/Willie169/Android-Non-Root-App>.
 * **App download link**: <https://github.com/Willie169/Android-Non-Root-App/releases/download/v1.0/com.willie.androidnonroot%5F10.apk>.
 
-In this tutorial, we’ll explore a range of powerful, open-source tools such as [Termux](https://github.com/termux/termux-app), [F-Droid](https://f-droid.org), [Shizuku](https://github.com/RikkaApps/Shizuku), [Tor](https://www.torproject.org), [TrackerControl](https://github.com/TrackerControl/tracker-control-android), [InviZible Pro](https://github.com/Gedsh/InviZible), [QEMU](https://www.qemu.org), [Tailscale](https://github.com/tailscale/tailscale), [OpenSSH](https://www.openssh.com), and [PipePipe](https://github.com/InfinityLoop1308/PipePipe) to enhance your Android device’s functionality, security, privacy, and customization without the need for root access.
+In this guide, we’ll explore a range of powerful, open-source tools such as [Termux](https://github.com/termux/termux-app), [F-Droid](https://f-droid.org), [Shizuku](https://github.com/RikkaApps/Shizuku), [Tor](https://www.torproject.org), [TrackerControl](https://github.com/TrackerControl/tracker-control-android), [InviZible Pro](https://github.com/Gedsh/InviZible), [QEMU](https://www.qemu.org), [Tailscale](https://github.com/tailscale/tailscale), [OpenSSH](https://www.openssh.com), and [PipePipe](https://github.com/InfinityLoop1308/PipePipe) to enhance your Android device’s functionality, security, privacy, and customization without the need for root access.
 
 Please read the [Global Note](#global-note) before you start or you may encounter errors.
 
-My main development of Termux Shell scripts has been moved to my another repository, [**termux-sh**](https://github.com/Willie169/termux-sh), which includes setup automation, shortcuts, installations and configurations of development tools and emulation environments such as proot, proot-distro, QEMU system emulation, and box64, and more, while tutorials for Termux, some of my scripts in [**termux-sh**](https://github.com/Willie169/termux-sh), and other related stuff remain here.
+My main development of Termux Shell scripts has been moved to my another repository, [**termux-sh**](https://github.com/Willie169/termux-sh), which includes setup automation, shortcuts, installations and configurations of development tools and emulation environments such as proot, proot-distro, QEMU system emulation, and box64, and more, while guides for Termux, some of my scripts in [**termux-sh**](https://github.com/Willie169/termux-sh), and other related stuff remain here.
 
 ---
 
@@ -23,6 +23,7 @@ My main development of Termux Shell scripts has been moved to my another reposit
 * [Table of Contents](#table-of-contents)
 * [Author Information](#author-information)
 * [Global Note](#global-note)
+* [Blogroll](#blogroll)
 * [F-Droid: Free Software Android Apps Repository and App Store](#f-droid-free-software-android-apps-repository-and-app-store)
   + [Install F-Droid](#install-f-droid)
   + [Introduction of F-Droid](#introduction-of-f-droid)
@@ -257,7 +258,7 @@ My main development of Termux Shell scripts has been moved to my another reposit
 
 ## Author Information
 
-The author of this tutorial is [**Willie169, Willie Shen, or 沈威宇**](https://github.com/Willie169).
+The author of this guide is [**Willie169, Willie Shen, or 沈威宇**](https://github.com/Willie169).
 
 If for whatever reason you want to send me money, here are where you may do so:
 
@@ -273,20 +274,27 @@ If for whatever reason you want to send me money, here are where you may do so:
 
 ## Global Note
 
-* This tutorial, as well as the software mentioned in it, is provided WITHOUT ANY WARRANTY, including but not limited to the implied warranties of MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE. Most of the software mentioned in this tutorial is open source.
+* This guide, as well as the software mentioned in it, is provided WITHOUT ANY WARRANTY, including but not limited to the implied warranties of MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE. Most of the software mentioned in this guide is open source.
+* Some of the contents of this guide may be outdated since I haven't updared much in the last year. I'll hopefully update it this summer. 
 * To prevent apps from being killed, you may turn off battery optimization and auto sleeping, set battery usage to unrestricted, acquire wakelock, etc. Go to [DontKillMyApp](#dontkillmyapp--dontkillmyapp-make-apps-work-by-urbandroid-team--urbandroid-team--petr-nalevka-urbandroid) for more information.
-* Many sections of the tutorial mention F-Droid, read [F-Droid
-* Many sections of the tutorial mention Termux. For people who are new to it, please refer to [Termux: A Powerful Terminal Emulation with an Extensive Linux Package Collection](#termux-a-powerful-terminal-emulation-with-an-extensive-linux-package-collection).
+* Many sections of the guide mention F-Droid, read [F-Droid
+* Many sections of the guide mention Termux. For people who are new to it, please refer to [Termux: A Powerful Terminal Emulation with an Extensive Linux Package Collection](#termux-a-powerful-terminal-emulation-with-an-extensive-linux-package-collection).
 * For people who are new to POSIX, please refer to [POSIX References](#posix-references).
-* You may encounter `Process completed (signal 9) press Enter` error even if you follow the steps in this tutorial. Read the tutorial about how to fix it in [Process completed (signal 9) press Enter Error](#process-completed-signal-9-press-enter-error).
-* Many sections of the tutorial mention VNC. Go to [Introduction of VNC (Virtual Network Computing)](introduction-of-vnc-virtual-network-computing) for introduction of VNC. You can connect to a VNC server with a VNC client. One recommended one for Android is AVNC. Read [AVNC: A VNC Client for Android](#avnc-a-vnc-client-for-android).
+* You may encounter `Process completed (signal 9) press Enter` error even if you follow the steps in this guide. Read the guide about how to fix it in [Process completed (signal 9) press Enter Error](#process-completed-signal-9-press-enter-error).
+* Many sections of the guide mention VNC. Go to [Introduction of VNC (Virtual Network Computing)](introduction-of-vnc-virtual-network-computing) for introduction of VNC. You can connect to a VNC server with a VNC client. One recommended one for Android is AVNC. Read [AVNC: A VNC Client for Android](#avnc-a-vnc-client-for-android).
 * Run update command (such as `pkg update` and `apt update`) before install command (such as `pkg install` and `apt install`) to update available packages.
 * Add `sudo` at the beginning of commands in Linux if root permission is needed. Remove `sudo` from the beginning of commands in Termux if the device is not rooted. Termux doesn’t need root permission to install packages etc.
 * Type `Y`, `y`, `Yes`, `yes`, etc. as asked for in response to any prompts that request confirmation during command execution to confirm execution.
-* Change the file names, directories, paths, addresses, ports, variables, etc. in the commands provided in the tutorial to the actual ones of yours.
+* Change the file names, directories, paths, addresses, ports, variables, etc. in the commands provided in the guide to the actual ones of yours.
 * Some sections about Linux usages are included, some of which assumes the Linux distribution is Debian derived.
-* When the tutorial uses text editor such as `nano`, `vim`, or `vi` to edit a file, you can use any text editor you want.
+* When the guide uses text editor such as `nano`, `vim`, or `vi` to edit a file, you can use any text editor you want.
 * In Linux, `root` is usually the password for root for the first time. You can usually set password latter by `passwd`.
+
+---
+
+## Blogroll
+
+- [Ivon’s blog / Ivon的部落格 / ivonblog.com](https://ivonblog.com): <q>This is a place for sharing the information of Free and Open source software, technologies, and researches of liberal arts. Here you will see many practical tips on using free software, and various possibilities for applying it in life. 這裡是分享GNU/Linux情報、自由開源軟體、電腦手機資訊、人文思辨的所在。在這裡你會看到許多自由軟體的實際操作心得，以及將其運用在生活中的各種可能性。</q>
 
 ---
 
@@ -479,7 +487,7 @@ Feature comparison between storage types:
 * The contents of the created `~/storage` folder are symlinks to different storage folders. Run `termux-setup-storage` to rebuild its structure.
 * After creating directory `Android/data/com.termux`, through file manager or by `termux-setup-storage`, you can access your external SD directly in this folder. The remainder of the external SD card will not be accessable from Termux unless you grant storage permission for Termux in Android. The symlink to the Termux-private folder on external storage will be `~/storage/external-1` or something similar. **WANRNING**: Please remember that if you uninstall Termux app or clear Termux application data through Android Settings (or Something similar), this directory will be deleted!
 * If you have Termux:API application and `termux-api` package installed, you can use Android file picker to get any file from either shared or external storage by using utility `termux-storage-get`. For example, `termux-storage-get filename.txt` will save the file that has been chosen through file picker as `filename.txt`.
-* You can access Termux home directory (`$HOME`) from the file manager using Storage Access Framework (SAF) and capable of accessing drives like USB or external SD-card in read-write mode. One recommended file manager which can access Termux home directory is [Material Files](https://play.google.com/store/apps/details?id=me.zhanghai.android.files). My tutorial for it is available in [Material File: Linux-Aware File Manager with FTP, SFTP, SMB and WebDAV Support](#material-file-linux-aware-file-manager-with-ftp-sftp-smb-and-webdav-support).
+* You can access Termux home directory (`$HOME`) from the file manager using Storage Access Framework (SAF) and capable of accessing drives like USB or external SD-card in read-write mode. One recommended file manager which can access Termux home directory is [Material Files](https://play.google.com/store/apps/details?id=me.zhanghai.android.files). My guide for it is available in [Material File: Linux-Aware File Manager with FTP, SFTP, SMB and WebDAV Support](#material-file-linux-aware-file-manager-with-ftp-sftp-smb-and-webdav-support).
 
 ### Shell in Termux
 
@@ -666,7 +674,7 @@ This fix is generally available for Stock Android 12L and beyond, and often unav
 #### Command Line Fix
 
 <ol>
-<li>Connect to Android Debug Bridge (ADB) of your Android device from another device or via Shizuku. For people who are new to them, please refer to the tutorial for them in <a href="#shizuku-systemui-tuner-and-ashell-use-local-adb-of-android-device-on-terminals-such-as-termux-without-another-device-with-shizuku-leave-developer-options-off-when-doing-so-with-systemui-tuner-and-use-adb-with-features-like-autocomplete-suggestion-with-ashell">Shizuku, SystemUI Tuner, and aShell: Use Local ADB of Android Device on Terminals Such as Termux without Another Device with Shizuku, Leave Developer Options off When Doing So with SystemUI Tuner, and Use ADB with Features like Autocomplete Suggestion with aShell</a>.</li>
+<li>Connect to Android Debug Bridge (ADB) of your Android device from another device or via Shizuku. For people who are new to them, please refer to the guide for them in <a href="#shizuku-systemui-tuner-and-ashell-use-local-adb-of-android-device-on-terminals-such-as-termux-without-another-device-with-shizuku-leave-developer-options-off-when-doing-so-with-systemui-tuner-and-use-adb-with-features-like-autocomplete-suggestion-with-ashell">Shizuku, SystemUI Tuner, and aShell: Use Local ADB of Android Device on Terminals Such as Termux without Another Device with Shizuku, Leave Developer Options off When Doing So with SystemUI Tuner, and Use ADB with Features like Autocomplete Suggestion with aShell</a>.</li>
 <li>Type <code>adb shell</code> to enter <code>adb shell</code>.</li>
 <li>Run the following commands inside <code>adb shell</code>:
 <pre><code>/system/bin/device_config set_sync_disabled_for_tests persistent
@@ -1938,7 +1946,7 @@ This section is deprecated and no longer maintained. It is recommended use [PRoo
 
 Andronix (`studio.com.techriz.andronix`) can be installed from [Google Play](https://play.google.com/store/apps/details?id=studio.com.techriz.andronix).
 
-Andronix is an app that lets you install Linux distributions like Ubuntu, Debian, Manjaro etc. in Termux on non-rooted Android devices with PRoot. Andronix provides paid, close-source modded OS too, which won’t be mentioned in this tutorial.
+Andronix is an app that lets you install Linux distributions like Ubuntu, Debian, Manjaro etc. in Termux on non-rooted Android devices with PRoot. Andronix provides paid, close-source modded OS too, which won’t be mentioned in this guide.
 
 ### Install an OS Following Andronix App Instructions
 
@@ -2313,7 +2321,7 @@ Shizuku (`moe.shizuku.privileged.api`) can be installed from [IzzyOnDroid F-Droi
 
 1. Tap `Use Shizuku in terminal applications` in Shizuku and export files `rish` and `rish_shizuku.dex` to somewhere on your phone.
 2. Use a text editor to replace `PKG` in `rish` with the package name of your terminal application. Take Termux for example, Termux’s package name is `com.termux`. Run `termux-setup-storage` and tap `Allow to grant Termux storage permission`.
-3. Open your terminal application and move the exported files to somewhere it can access (usually with `mv old_location new_location`). The root directory of the main storage of Android is usually `/storage/emulated/0`. One recommended terminal application for Android is Termux. My tutorial for it is available in [Termux: A Powerful Terminal Emulation with an Extensive Linux Package Collection](#termux-a-powerful-terminal-emulation-with-an-extensive-linux-package-collection).
+3. Open your terminal application and move the exported files to somewhere it can access (usually with `mv old_location new_location`). The root directory of the main storage of Android is usually `/storage/emulated/0`. One recommended terminal application for Android is Termux. My guide for it is available in [Termux: A Powerful Terminal Emulation with an Extensive Linux Package Collection](#termux-a-powerful-terminal-emulation-with-an-extensive-linux-package-collection).
 4. Go to the directory you moved the exported files to with `cd directory` (assumed `~/shizuku` below) and run `sh rish`.
 5. `~ $` should become `<device>:/ $` (such as `e2q:/ $`) if `sh rish` succeeded. Write ADB commands here. Note that there is no need to use `adb` or `adb shell` prefixes before commands and that `devices` command gets `/system/bin/sh: devices: inaccessible or not found`.
 6. You can turn WiFi off after ADB is connected. The notification of Shizuku may say Paring failed after that, but you can check Shizuku app to check whether there’s a block that reads `Shizuku is running` on the top.
@@ -2325,7 +2333,7 @@ SystemUI Tuner can be installed from [Google Play](https://play.google.com/store
 
 ### To Leave Developer Options off When Using Shizuku to Connect to ADB with SystemUI Tuner
 
-Some apps (such as many financial apps) may require `Developer Options` to be off when using them. This section is the tutorial about how to turn `Developer Options` off while still using ADB Shell with Shizuku.
+Some apps (such as many financial apps) may require `Developer Options` to be off when using them. This section is the guide about how to turn `Developer Options` off while still using ADB Shell with Shizuku.
 
 1. Run `adb shell` command `pm grant com.zacharee1.systemuituner android.permission.WRITE_SECURE_SETTINGS` (you can do it with Shizuku and a terminal such as Termux or aShell).
 2. Connect to a WiFi. You don’t need to log in or have real WiFi access, just make your phone believes you are connected to WiFi.
@@ -2512,7 +2520,7 @@ TrackerControl (`net.kollnig.missioncontrol.fdroid`), also known as TC, can be i
 
 * Blocking trackers can be used independently or with proxy (such as Prxoy mode of InviZible Pro).
 * TrackerControl has a `Traffic log` feature for free, which can help a lot in identifying which trackers should be unblocked when the services crash.
-* This tutorial section, including the setting `.xml`, can be used in NetGuard as well because TrackerControl uses NetGuard’s code. However, `Traffic log` feature is not available in NetGuard’s free version but only available in Pro version. NetGuard is available on F-Droid: <https://f-droid.org/packages/eu.faircode.netguard> or Google Play: <https://play.google.com/store/apps/details?id=eu.faircode.netguard>.
+* This guide section, including the setting `.xml`, can be used in NetGuard as well because TrackerControl uses NetGuard’s code. However, `Traffic log` feature is not available in NetGuard’s free version but only available in Pro version. NetGuard is available on F-Droid: <https://f-droid.org/packages/eu.faircode.netguard> or Google Play: <https://play.google.com/store/apps/details?id=eu.faircode.netguard>.
 * You have to disable monitoring of apps route traffic through Tor itself within TrackerControl, such as Tor Browser, and Termux if you’re using `tor`, `torsocks`, or similar things.
 
 ### Configure TrackerControl to Block Trackers without InviZible Pro
@@ -2541,7 +2549,7 @@ TrackerControl (`net.kollnig.missioncontrol.fdroid`), also known as TC, can be i
 14. Set where to validate the internet connection in `Validate at` if you want, `www.f-droid.org` for example.
 15. Block unwanted trackers and set other things if you want.
 
-If you export settings and import it on another device, the blocklist may not be able to be configured as that in the previous device. You can apply some of the above settings with the `.xml` below (assuming the configuration of Invizible Pro is as in this tutorial) by coping it, storing it in a `.xml` file and going to `Settings` \> `Backup` \> `Import settings` of TrackerControl to import this file. However, it just contains some of the settings, you have to configure others yourself and test whether your applications work as normal because things may vary from case to case.
+If you export settings and import it on another device, the blocklist may not be able to be configured as that in the previous device. You can apply some of the above settings with the `.xml` below (assuming the configuration of Invizible Pro is as in this guide) by coping it, storing it in a `.xml` file and going to `Settings` \> `Backup` \> `Import settings` of TrackerControl to import this file. However, it just contains some of the settings, you have to configure others yourself and test whether your applications work as normal because things may vary from case to case.
 
 ```
 <?xml version='1.0' encoding='UTF-8' standalone='yes' ?>
@@ -2595,7 +2603,7 @@ If you export settings and import it on another device, the blocklist may not be
 15. Set other things if you want.
 16. Turn on `DNSCrypt` and `Tor`.
 
-You can apply some of the above settings with the files below (assuming the configuration of TrackerControl is as in this tutorial). However, they just contain some of the settings, you have to configure others yourself and test whether your applications work as normal because things may vary from case to case.
+You can apply some of the above settings with the files below (assuming the configuration of TrackerControl is as in this guide). However, they just contain some of the settings, you have to configure others yourself and test whether your applications work as normal because things may vary from case to case.
 
 <ul>
 <li><code>dns-proxy.toml</code>: Copy the text in the below block, tap <code>Edit dns-proxy.toml</code> in <code>DNSCrypt Settings</code>, and paste.
@@ -2977,7 +2985,7 @@ The syntax of `sftp`, which connects to the server from the client, is generally
 sftp -p 2222 user@example.com
 ```
 
-You can also connect to the sftp server from other clients. One recommended file manager for Android which can connect to sftp server is [Material Files](https://play.google.com/store/apps/details?id=me.zhanghai.android.files). My tutorial for it is available in [Material File: Linux-Aware File Manager with FTP, SFTP, SMB and WebDAV Support](#material-file-linux-aware-file-manager-with-ftp-sftp-smb-and-webdav-support).
+You can also connect to the sftp server from other clients. One recommended file manager for Android which can connect to sftp server is [Material Files](https://play.google.com/store/apps/details?id=me.zhanghai.android.files). My guide for it is available in [Material File: Linux-Aware File Manager with FTP, SFTP, SMB and WebDAV Support](#material-file-linux-aware-file-manager-with-ftp-sftp-smb-and-webdav-support).
 
 ### Further Readings and References about OpenSSH with Linux and Termux
 
