@@ -702,16 +702,16 @@ Do you want to accept these changes and continue updating from this repository? 
 <li>Connect to Android Debug Bridge (ADB) of your Android device from another device or via Shizuku. For people who are new to them, please refer to the guide for them in <a href="#shizuku-systemui-tuner-and-ashell-use-local-adb-of-android-device-on-terminals-such-as-termux-without-another-device-with-shizuku-leave-developer-options-off-when-doing-so-with-systemui-tuner-and-use-adb-with-features-like-autocomplete-suggestion-with-ashell">Shizuku, SystemUI Tuner, and aShell: Use Local ADB of Android Device on Terminals Such as Termux without Another Device with Shizuku, Leave Developer Options off When Doing So with SystemUI Tuner, and Use ADB with Features like Autocomplete Suggestion with aShell</a>.</li>
 <li>Type <code>adb shell</code> to enter <code>adb shell</code>.</li>
 <li>Run the following commands inside <code>adb shell</code>:
-<pre><code>/system/bin/device_config set_sync_disabled_for_tests persistent
-/system/bin/device_config put activity_manager max_phantom_processes 2147483647
+<pre><code>device_config set_sync_disabled_for_tests persistent
+device_config put activity_manager max_phantom_processes 2147483647
 settings put global settings_enable_monitor_phantom_procs false
 </code></pre></li>
 <li>To check the status of whether phantom process killer is disabled, run the following commands inside <code>adb shell</code>:
 <pre><code>/system/bin/dumpsys activity settings | grep max_phantom_processes
-/system/bin/device_config get activity_manager max_phantom_processes
+device_config get activity_manager max_phantom_processes
 </code></pre></li>
 <li>To enable phantom process killer again, run the following commands inside <code>adb shell</code>:
-<pre><code>/system/bin/device_config set_sync_disabled_for_tests none; /system/bin/device_config put activity_manager max_phantom_processes 32
+<pre><code>device_config set_sync_disabled_for_tests none; device_config put activity_manager max_phantom_processes 32
 settings put global settings_enable_monitor_phantom_procs true
 </code></pre></li>
 </ol>
